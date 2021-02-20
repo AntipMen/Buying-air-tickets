@@ -1,54 +1,46 @@
 import React from "react";
-import label from '../assets/label.png'
+import label from "../assets/label.png";
+import { observer } from "mobx-react";
+import { ticketsType } from "../interface/interface";
 
 interface ticket {
-    price: number,
-    cost: number | undefined,
-    val: string | undefined,
-    stops: number,
-    dTime: string,
-    dDate: string,
-    aTime: string,
-    aDate: string,
-    origin: string | number,
-    name: string
-    destination: string,
-    dName: string,
-    carrier: string
-
+  ticket: ticketsType;
 }
 
-export default ({price, cost, val, stops, dTime, dDate, aTime, aDate, origin, name, destination, dName, carrier}: ticket) => {
-    console.log(price, cost, val, stops)
-    return (
-        <div className="ticket_block">
-            <div className="button-block">
-                <img className="label" src={label} alt="label"/>
-                <button>
-                    <div>Buy for:</div>
-                    <div>{cost ? cost : price} {val ? val : 'RUB'}</div>
-                </button>
-            </div>
-            <div className="info-block">
-                <div>
-                    <p className="time">{dTime}</p>
-                    <span className="city">{origin}, {name}</span>
-                    <span className="date">{dDate}</span>
-                </div>
-
-                <div className="line">
-                    <span>Transfer: {stops}</span>
-                </div>
-
-                <div>
-                    <p className="time">{aTime}</p>
-                    <span className="city">{dName}, {destination}</span>
-                    <span className="date">{aDate}</span>
-                </div>
-
-
-
-            </div>
+export default observer(({ ticket }: ticket) => {
+  return (
+    <div className="ticket_block">
+      <div className="button-block">
+        <img className="label" src={label} alt="label" />
+        <button>
+          <div>Buy for:</div>
+          <div>
+            {ticket.cost ? ticket.cost : ticket.price}{" "}
+            {ticket.val ? ticket.val : "RUB"}
+          </div>
+        </button>
+      </div>
+      <div className="info-block">
+        <div>
+          <p className="time">{ticket.departure_time}</p>
+          <span className="city">
+            {ticket.origin},{ticket.origin_name}
+          </span>
+          <span className="date">{ticket.departure_date}</span>
         </div>
-    )
-}
+
+        <div className="line">
+          <span>Transfer: {ticket.stops}</span>
+        </div>
+
+        <div>
+          <p className="time">{ticket.arrival_time}</p>
+          <span className="city">
+            {ticket.destination_name}, {ticket.destination}
+          </span>
+          <span className="date">{ticket.arrival_date}</span>
+        </div>
+      </div>
+    </div>
+  );
+});

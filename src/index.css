@@ -14,7 +14,7 @@ code {
 }
 
 .main {
-  background-color: #f3f7fa;
+  background-color: #f1f6f9;
   display: flex;
   justify-content: space-around;
   padding: 15px;
@@ -41,7 +41,7 @@ code {
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 15px;
-  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0 1px 5px 0 #d7e3e9;
 }
 
 .options_block {
@@ -133,7 +133,7 @@ input[type="checkbox"] {
   padding: 15px;
   display: flex;
   flex-direction: column;
- justify-content: space-around;
+  justify-content: space-around;
 }
 
 .button-block button {
@@ -145,6 +145,10 @@ input[type="checkbox"] {
   border: 1px;
   border-radius: 5px;
   width: 100%;
+}
+
+.button-block button:hover {
+  background-color: #ff8124;
 }
 
 .label {

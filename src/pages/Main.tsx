@@ -1,40 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Options from "../components/Options";
 import Tickets from "../components/Tickets";
-import tickets from "../api/tickets";
-import { useSelector} from 'react-redux';
-import {ticketsType} from "../interface/interface";
+import { ticketsType } from "../interface/interface";
+import { observer } from "mobx-react";
+import Example from "../stores/mobXStore";
 
-export default () => {
-    const select: any = useSelector((state) => state);
-    const sortSelect: ticketsType[] = select.sort((a:ticketsType, b:ticketsType) => {
-        if (a.cost) {
-            //@ts-ignore
-            return a.cost - b.cost;
-        } else {
-           return a.price - b.price;
-        }
+export default observer(() => {
+  const { filteredTickets, sortingTickets } = Example;
 
-    })
-    console.log(sortSelect)
+  useEffect(() => {
+    sortingTickets();
+  }, []);
 
-    return (
-        <div className="main">
-            <Options/>
-            <div className="col tickets">{sortSelect.map((ticket: ticketsType) => <Tickets
-                price={ticket.price}
-                cost={ticket.cost}
-                val={ticket.val}
-                stops={ticket.stops}
-                dTime={ticket.departure_time}
-                dDate={ticket.departure_date}
-                aTime={ticket.arrival_time}
-                aDate={ticket.arrival_date}
-                origin={ticket.origin}
-                name={ticket.origin_name}
-                destination={ticket.destination}
-                dName={ticket.destination_name}
-                carrier={ticket.carrier}/>)}</div>
-        </div>
-    )
-}
+  return (
+    <div className="main">
+      <Options />
+      <div className="col tickets">
+        {filteredTickets.map((ticket: ticketsType) => {
+          return <Tickets ticket={ticket} />;
+        })}
+      </div>
+    </div>
+  );
+});
