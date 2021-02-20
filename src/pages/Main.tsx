@@ -16,12 +16,25 @@ export default () => {
         }
 
     })
+    console.log(sortSelect)
 
     return (
         <div className="main">
             <Options/>
-            <div className="ticket">{sortSelect.map((ticket: ticketsType) => <Tickets
-                price={ticket.price} cost={ticket.cost} val={ticket.val} stops={ticket.stops}/>)}</div>
+            <div className="col tickets">{sortSelect.map((ticket: ticketsType) => <Tickets
+                price={ticket.price}
+                cost={ticket.cost}
+                val={ticket.val}
+                stops={ticket.stops}
+                dTime={ticket.departure_time}
+                dDate={ticket.departure_date}
+                aTime={ticket.arrival_time}
+                aDate={ticket.arrival_date}
+                origin={ticket.origin}
+                name={ticket.origin_name}
+                destination={ticket.destination}
+                dName={ticket.destination_name}
+                carrier={ticket.carrier}/>)}</div>
         </div>
     )
 }
