@@ -192,3 +192,18 @@ input[type="checkbox"] {
   border-bottom: 1px solid #a0b0b9;
   height: 50px;
 }
+
+.form-control {
+  width: 100%;
+}
+
+.input-control {
+  display: flex;
+}
+
+.input-control label {
+  width: 53%;
+  padding-right: 10px;
+  text-align: right;
+  color: rgba(0,0,0,.64);
+}
