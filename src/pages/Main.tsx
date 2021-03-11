@@ -5,6 +5,7 @@ import { ticketsType } from "../interface/interface";
 import { observer } from "mobx-react";
 import Example from "../stores/mobXStore";
 
+
 export default observer(() => {
   const { filteredTickets, sortingTickets } = Example;
 
