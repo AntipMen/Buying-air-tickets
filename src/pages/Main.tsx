@@ -1,7 +1,6 @@
 import React from "react";
 import Options from "../components/Options";
 import Tickets from "../components/Tickets";
-import tickets from "../api/tickets";
 import { useSelector} from 'react-redux';
 import {ticketsType} from "../interface/interface";
 
@@ -16,7 +15,6 @@ export default () => {
         }
 
     })
-    console.log(sortSelect)
 
     return (
         <div className="main">

@@ -39,7 +39,6 @@ export const actionStops = (num: number) => {
     if (filters.length === 0) {
         return {type: 'ALL'}
     }
-    console.log('filters', filters)
     return {type: 'STOPS', filters}
 }
 
