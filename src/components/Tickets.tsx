@@ -27,20 +27,19 @@ export default observer(({ticket}: ticket) => {
                     <div>
                         <p className="time">{ticket.departure_time}</p>
                         <span className="city">
-            {ticket.origin}, {ticket.origin_name}
-          </span>
+                            {ticket.origin}, {ticket.origin_name}
+                        </span>
                         <span className="date">{ticket.departure_date}</span>
                     </div>
 
                     <div className="line">
                         <span>Transfer: {ticket.stops}</span>
                     </div>
-
                     <div>
                         <p className="time">{ticket.arrival_time}</p>
                         <span className="city">
-            {ticket.destination_name}, {ticket.destination}
-          </span>
+                            {ticket.destination_name}, {ticket.destination}
+                        </span>
                         <span className="date">{ticket.arrival_date}</span>
                     </div>
                 </div>
