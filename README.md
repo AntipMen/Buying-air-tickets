@@ -1,46 +1,24 @@
-# Getting Started with Create React App
+# project-react buyin-air-tickets
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project where I practice using different state manager: Redux and MobX.
 
-## Available Scripts
+### master - branch - Redux
 
-In the project directory, you can run:
+Reducer was implemented, with it help store data locally and were able to work with its to view tickets and filter its.
 
-### `npm start`
+### mob-x - branch - MobX
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+MobX local storage implemented.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### General information
 
-### `npm test`
+With help of state managers, the display view of ticket data has been implemented. 
+Have filter by the number of transfers. Tickets are filtered by price increase. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![ticket1](https://user-images.githubusercontent.com/58369971/111044405-2b621e00-8451-11eb-8051-ad4c4bfd8da5.png)
 
-### `npm run build`
+It is also possible to view the cost in different currencies.
+![ticket2](https://user-images.githubusercontent.com/58369971/111044892-f1dee200-8453-11eb-8fcf-7d5eeea5ee20.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+There is also a form for buying a ticket.
+![ticket3](https://user-images.githubusercontent.com/58369971/111044907-fd320d80-8453-11eb-89d9-5981dad77741.png)
