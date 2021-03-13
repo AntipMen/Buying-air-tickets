@@ -1,6 +1,6 @@
 # project-react buyin-air-tickets
 
-Project where I practice using different state manager: Redux and MobX.
+Project where I practice in using different state manager: Redux and MobX.
 
 ### master - branch - Redux
 
