@@ -1,10 +1,10 @@
-# project-react buyin-air-tickets
+# project-react purchase-of-air-tickets
 
-Project where I practice in using different state manager: Redux and MobX.
+Project I've participated in, is using practice in using different state manager: Redux and MobX.
 
 ### master - branch - Redux
 
-Reducer was implemented, with it help store data locally and were able to work with its to view tickets and filter its.
+Reducer was implemented, through store data locally and were able to work with its to view tickets and filter them.
 
 ### mob-x - branch - MobX
 
@@ -12,7 +12,7 @@ MobX local storage implemented.
 
 ### General information
 
-With help of state managers, the display view of ticket data has been implemented. 
+Through of state managers, the display view of ticket data has been implemented. 
 Have filter by the number of transfers. Tickets are filtered by price increase. 
 
 ![ticket1](https://user-images.githubusercontent.com/58369971/111044405-2b621e00-8451-11eb-8051-ad4c4bfd8da5.png)
